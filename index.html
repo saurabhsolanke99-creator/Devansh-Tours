@@ -1,216 +1,225 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Devansh Tours | India Tour & Travel</title>
-<meta name="description" content="Devansh Tours - India tour packages, hotel booking, railway tickets, flight tickets and customized tour planning.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Devansh Tours - Tour packages across India. Hotel booking, railway tickets, flight tickets and customized tour planning.">
+<title>Devansh Tours | Explore India With Us</title>
 <style>
-:root{--navy:#081f3a;--blue:#1267a8;--gold:#f4b52d;--red:#d92525;--ink:#17212b;--muted:#657482;--line:#dce7ee;--shadow:0 15px 40px rgba(8,31,58,.12)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#f7fbfd}a{text-decoration:none;color:inherit}
-.container{width:min(1180px,92%);margin:auto}
-.top{background:var(--navy);color:white;font-size:13px}.top .container{display:flex;justify-content:space-between;gap:15px;padding:8px 0;flex-wrap:wrap}
-header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo-text{font-weight:900;font-size:27px;color:var(--navy);letter-spacing:-1px}.logo-text span{color:var(--red)}
-nav{display:flex;gap:22px;font-size:14px;font-weight:800}nav a:hover{color:var(--blue)}
-.btn{border:0;border-radius:12px;padding:12px 17px;font-weight:900;cursor:pointer;display:inline-flex;justify-content:center;align-items:center;gap:7px}.primary{background:var(--blue);color:white}.gold{background:var(--gold);color:#16202b}.outline{background:white;border:1px solid var(--line)}
-.hero{color:white;background:linear-gradient(90deg,rgba(4,25,48,.94),rgba(4,25,48,.62)),url('poster-5.jpg') center/cover;min-height:610px;display:flex;align-items:center}
-.hero-content{padding:75px 0;max-width:800px}.badge{display:inline-block;background:rgba(244,181,45,.18);color:#ffe39a;border:1px solid rgba(244,181,45,.35);padding:7px 12px;border-radius:99px;font-weight:900;font-size:12px}.hero h1{font-size:clamp(43px,7vw,74px);line-height:1.02;margin:18px 0}.hero p{font-size:18px;line-height:1.65;max-width:700px;color:#edf7ff}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
-.search{margin-top:-42px;position:relative;background:white;border-radius:18px;padding:20px;box-shadow:var(--shadow);display:grid;grid-template-columns:1.2fr 1fr 1fr auto;gap:12px}.field{display:flex;flex-direction:column;gap:6px}.field label{font-size:11px;font-weight:900;color:var(--muted)}input,select,textarea{font:inherit;width:100%;border:1px solid var(--line);border-radius:10px;padding:12px;background:#fff;color:var(--ink)}textarea{min-height:105px;resize:vertical}
-section{padding:78px 0}.heading{margin-bottom:28px}.heading h2{font-size:35px;margin:0 0 7px}.heading p{margin:0;color:var(--muted)}
-.poster-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:23px}.poster{background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}.poster img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:top}.poster-body{padding:18px}.poster h3{margin:0 0 6px;font-size:21px}.poster p{margin:0 0 14px;color:var(--muted);font-size:14px}.poster-actions{display:flex;gap:9px;flex-wrap:wrap}
-.features{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}.feature{background:white;border:1px solid var(--line);border-radius:16px;padding:21px}.feature .ico{font-size:29px}.feature h3{margin:9px 0 5px}.feature p{margin:0;color:var(--muted);font-size:14px}
-.booking{background:linear-gradient(135deg,#062a4d,#0c6da2);color:white}.booking-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px}.booking h2{font-size:39px;margin:0 0 10px}.booking-copy{color:#dceef9}.exec{display:flex;gap:15px;align-items:center;background:white;color:var(--ink);border-radius:16px;padding:17px;margin-top:25px}.avatar{width:58px;height:58px;flex:none;border-radius:50%;display:grid;place-items:center;background:#e9f6ff;color:var(--blue);font-weight:900;font-size:21px}.exec h3{margin:0}.exec p{margin:3px 0;color:var(--muted);font-size:13px}.booking-card{background:white;color:var(--ink);border-radius:18px;padding:25px;box-shadow:var(--shadow)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.full{grid-column:1/-1}
-.notice{display:none;position:fixed;right:18px;bottom:18px;z-index:100;background:var(--navy);color:white;padding:14px 17px;border-radius:12px;box-shadow:var(--shadow)}
-footer{background:var(--navy);color:#dce9f2;padding:45px 0 22px}.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}.footer-title{color:white;font-weight:900;margin-bottom:10px}.copy{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;margin-top:25px;font-size:13px;color:#9fb4c4}
-@media(max-width:900px){nav{display:none}.search{grid-template-columns:1fr 1fr}.poster-grid{grid-template-columns:1fr 1fr}.features{grid-template-columns:1fr 1fr}.booking-wrap,.footer-grid{grid-template-columns:1fr}}
-@media(max-width:560px){.search,.poster-grid,.features,.form-grid{grid-template-columns:1fr}.hero{min-height:560px}.hero h1{font-size:45px}.btn{width:100%}.actions{display:grid}.top .container{display:block}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#f5f8fc;color:#172033;line-height:1.5}
+a{text-decoration:none;color:inherit}
+.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid #e5eaf2}
+.nav{max-width:1180px;margin:auto;padding:13px 20px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;color:#102d63;font-size:20px}
+.brand-mark{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#0b4da2,#18a0d9);display:grid;place-items:center;color:white;font-size:21px}
+.navlinks{display:flex;gap:22px;font-weight:700;font-size:14px}
+.navlinks a:hover{color:#d13b20}
+.phone{background:#d53a1f;color:#fff;padding:10px 15px;border-radius:24px;font-weight:800;font-size:14px}
+.hero{background:linear-gradient(135deg,#062c68,#0d68a8 55%,#12a1c5);color:white}
+.hero-inner{max-width:1180px;margin:auto;padding:70px 20px 64px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:40px}
+.badge{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);padding:7px 13px;border-radius:20px;font-size:13px;font-weight:800;margin-bottom:16px}
+.hero h1{font-size:clamp(38px,6vw,68px);line-height:1.02;margin-bottom:18px}
+.hero h1 span{color:#ffd45b}
+.hero p{font-size:18px;max-width:650px;color:#e8f5ff}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{padding:13px 20px;border-radius:10px;font-weight:800;display:inline-block}
+.btn-primary{background:#ffcc42;color:#172033}
+.btn-light{border:1px solid rgba(255,255,255,.55);color:white}
+.hero-card{background:white;color:#172033;border-radius:24px;padding:18px;box-shadow:0 20px 55px rgba(0,0,0,.22)}
+.hero-card img{width:100%;height:310px;object-fit:cover;border-radius:16px}
+.hero-card .caption{padding:14px 4px 2px;font-weight:800;font-size:18px}
+.section{max-width:1180px;margin:auto;padding:58px 20px}
+.section-head{text-align:center;margin-bottom:28px}
+.kicker{color:#d13b20;font-weight:900;text-transform:uppercase;font-size:12px;letter-spacing:1.5px}
+.section h2{font-size:34px;margin:5px 0 8px;color:#102d63}
+.section-head p{color:#657187}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.package{background:white;border:1px solid #e3e8f0;border-radius:18px;overflow:hidden;box-shadow:0 8px 25px rgba(20,45,80,.07);transition:.2s}
+.package:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(20,45,80,.13)}
+.package img{width:100%;height:250px;object-fit:cover;display:block;cursor:pointer}
+.package-body{padding:16px}
+.package h3{font-size:19px;color:#102d63;margin-bottom:5px}
+.package p{font-size:14px;color:#68758a;margin-bottom:13px}
+.details{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.view{background:#102d63;color:#fff;padding:9px 13px;border-radius:8px;font-weight:800;font-size:13px;cursor:pointer;border:0}
+.contact-strip{background:#fff;border-top:1px solid #e5eaf2;border-bottom:1px solid #e5eaf2}
+.contact-box{max-width:1180px;margin:auto;padding:38px 20px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.contact-box h2{color:#102d63}
+.contact-box p{color:#657187}
+.footer{background:#071c3e;color:#dce9f8}
+.footer-inner{max-width:1180px;margin:auto;padding:34px 20px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer strong{color:white}
+.note{font-size:12px;color:#9db1ca;margin-top:8px}
+.modal{display:none;position:fixed;inset:0;background:rgba(3,12,27,.84);z-index:100;padding:22px;overflow:auto}
+.modal.open{display:flex;align-items:center;justify-content:center}
+.modal-content{background:white;max-width:1050px;width:100%;border-radius:18px;padding:14px;position:relative}
+.modal-content img{display:block;width:100%;max-height:88vh;object-fit:contain;border-radius:10px}
+.close{position:absolute;right:12px;top:10px;width:38px;height:38px;border:0;border-radius:50%;background:#102d63;color:#fff;font-size:23px;cursor:pointer;z-index:2}
+@media(max-width:850px){
+ .navlinks{display:none}
+ .hero-inner{grid-template-columns:1fr;padding-top:48px}
+ .hero-card{max-width:620px;margin:auto}
+ .grid{grid-template-columns:repeat(2,1fr)}
+ .contact-box{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:560px){
+ .grid{grid-template-columns:1fr}
+ .package img{height:260px}
+ .hero h1{font-size:42px}
+ .hero p{font-size:16px}
+ .nav{padding:10px 14px}
+ .phone{padding:9px 12px;font-size:12px}
+}
 </style>
 </head>
 <body>
 
-<div class="top"><div class="container">
-<span>🇮🇳 Tours across India • Hotel Booking • Railway Tickets • Flight Tickets</span>
-<span id="topPhone">📞 +91 86050 72575</span>
-</div></div>
+<header class="header">
+  <nav class="nav">
+    <a class="brand" href="#top">
+      <span class="brand-mark">✈</span>
+      <span>DEVANSH TOURS</span>
+    </a>
+    <div class="navlinks">
+      <a href="#packages">Packages</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="phone" href="tel:+918605072575">📞 8605072575</a>
+  </nav>
+</header>
 
-<header><div class="container nav">
-<a class="logo-text" href="#home">DEVANSH <span>TOURS</span></a>
-<nav><a href="#packages">Packages</a><a href="#services">Services</a><a href="#booking">Book / Enquire</a><a href="#contact">Contact</a></nav>
-<a class="btn primary" href="#booking">Book / Enquire</a>
-</div></header>
+<main id="top">
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="badge">TOURS • TICKETS • TRAVEL SERVICES</span>
+      <h1>Explore India.<br><span>Travel Better.</span></h1>
+      <p>Discover memorable destinations with Devansh Tours. Choose a ready-made tour package or ask us for a customized trip.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#packages">Explore Packages</a>
+        <a class="btn btn-light" href="tel:+918605072575">Call Now</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img src="poster-1.jpg" alt="Devansh Tours Kerala tour package" loading="eager">
+      <div class="caption">Kerala • Backwaters • Munnar • Thekkady</div>
+    </div>
+  </div>
+</section>
 
-<main id="home">
-<section class="hero"><div class="container hero-content">
-<span class="badge">॥ साई ॥ • PERSONALIZED INDIA TOURS</span>
-<h1 id="heroTitle">Explore India with Devansh Tours.</h1>
-<p id="heroDesc">From the Himalayas to Kerala, Rajasthan, Goa and spiritual India — choose a brochure package or ask us to build a customized trip for you.</p>
-<div class="actions"><a class="btn gold" href="#packages">View Tour Packages</a><a class="btn outline" href="#booking">Get a Custom Quote</a></div>
-</div></section>
+<section class="section" id="packages">
+  <div class="section-head">
+    <div class="kicker">Our Tours</div>
+    <h2>Popular Tour Packages</h2>
+    <p>Tap any package to view the complete brochure.</p>
+  </div>
 
-<div class="container">
-<form class="search" onsubmit="searchPackages(event)">
-<div class="field"><label>DESTINATION / STATE</label><select id="filter"><option value="">All packages</option></select></div>
-<div class="field"><label>TRAVELLERS</label><input id="travellersSearch" type="number" min="1" value="2"></div>
-<div class="field"><label>TRAVEL DATE</label><input id="dateSearch" type="date"></div>
-<button class="btn primary">Find Packages</button>
-</form>
-</div>
+  <div class="grid">
+    <article class="package">
+      <img src="poster-1.jpg" alt="Kerala tour package" onclick="openPoster('poster-1.jpg')" loading="lazy">
+      <div class="package-body"><h3>Kerala Tour</h3><p>Alappuzha • Munnar • Thekkady • Kovalam • Kochi</p><div class="details"><span>Custom packages</span><button class="view" onclick="openPoster('poster-1.jpg')">View Brochure</button></div></div>
+    </article>
 
-<section id="packages"><div class="container">
-<div class="heading"><h2>Packages from our brochures</h2><p>These package cards use the brochures you uploaded. Tap “Enquire” to send the selected trip to the booking executive.</p></div>
-<div class="poster-grid" id="posterGrid"></div>
-</div></section>
+    <article class="package">
+      <img src="poster-2.jpg" alt="Mysore Ooty Coorg tour package" onclick="openPoster('poster-2.jpg')" loading="lazy">
+      <div class="package-body"><h3>Mysore • Ooty • Coorg</h3><p>Palace • Gardens • Nilgiri Toy Train • Tea Estates</p><div class="details"><span>Custom packages</span><button class="view" onclick="openPoster('poster-2.jpg')">View Brochure</button></div></div>
+    </article>
 
-<section id="services"><div class="container">
-<div class="heading"><h2>Complete travel support</h2><p>Services highlighted in your brochures.</p></div>
-<div class="features">
-<div class="feature"><div class="ico">🏨</div><h3>Hotel booking</h3><p>Hotel arrangements for your selected destination and itinerary.</p></div>
-<div class="feature"><div class="ico">🚆</div><h3>Railway tickets</h3><p>Rail ticket planning can be included with your tour enquiry.</p></div>
-<div class="feature"><div class="ico">✈️</div><h3>Flight tickets</h3><p>Flight arrangements can be planned as part of your trip.</p></div>
-<div class="feature"><div class="ico">🚌</div><h3>Tour planning</h3><p>Transport, sightseeing, guides and customized India tour plans.</p></div>
-</div>
-</div></section>
+    <article class="package">
+      <img src="poster-3.jpg" alt="Shimla Kullu Manali tour package" onclick="openPoster('poster-3.jpg')" loading="lazy">
+      <div class="package-body"><h3>Shimla • Kullu • Manali</h3><p>Snow points • Solang Valley • Atal Tunnel • Manikaran</p><div class="details"><span>7 Days / 6 Nights</span><button class="view" onclick="openPoster('poster-3.jpg')">View Brochure</button></div></div>
+    </article>
 
-<section class="booking" id="booking"><div class="container booking-wrap">
-<div><span class="badge">BOOKING ENQUIRY</span><h2>Tell us where you want to go.</h2><p class="booking-copy">Submit your requirements and the enquiry will open directly in WhatsApp with our booking executive.</p>
-<div class="exec"><div class="avatar">SS</div><div><h3 id="execName">Shubham Solanke (Deshmukh)</h3><p>Booking Executive</p><strong id="execPhone">+91 86050 72575</strong></div></div></div>
+    <article class="package">
+      <img src="poster-4.jpg" alt="Shimla Kullu Manali Atal Tunnel tour package" onclick="openPoster('poster-4.jpg')" loading="lazy">
+      <div class="package-body"><h3>Himachal Special</h3><p>Shimla • Kullu • Manali • Solang • Rohtang • Kasol</p><div class="details"><span>₹25,000 shown in brochure</span><button class="view" onclick="openPoster('poster-4.jpg')">View Brochure</button></div></div>
+    </article>
 
-<div class="booking-card">
-<form onsubmit="sendWhatsApp(event)"><div class="form-grid">
-<div class="field"><label>NAME *</label><input id="name" required></div>
-<div class="field"><label>MOBILE *</label><input id="mobile" required></div>
-<div class="field"><label>PACKAGE / DESTINATION *</label><select id="destination" required></select></div>
-<div class="field"><label>TRAVELLERS *</label><input id="travellers" type="number" min="1" value="2" required></div>
-<div class="field"><label>TRAVEL DATE</label><input id="date" type="date"></div>
-<div class="field"><label>TRIP TYPE</label><select id="tripType"><option>Family</option><option>Friends</option><option>Couple</option><option>Solo</option><option>Spiritual / Pilgrimage</option></select></div>
-<div class="field full"><label>REQUIREMENTS</label><textarea id="message" placeholder="Budget, hotel preference, transport, sightseeing, pickup location, etc."></textarea></div>
-<div class="full"><button class="btn primary" style="width:100%">💬 Send Enquiry on WhatsApp</button></div>
-</div></form>
-</div></div></section>
+    <article class="package">
+      <img src="poster-5.jpg" alt="Uttarakhand Char Dham tour package" onclick="openPoster('poster-5.jpg')" loading="lazy">
+      <div class="package-body"><h3>Uttarakhand • Devbhoomi</h3><p>Char Dham • Rishikesh • Nainital • Mussoorie • Auli</p><div class="details"><span>7 Days / 6 Nights shown</span><button class="view" onclick="openPoster('poster-5.jpg')">View Brochure</button></div></div>
+    </article>
 
-<section><div class="container"><div class="heading"><h2>Safe & simple enquiries</h2><p>Your enquiry opens in WhatsApp. No customer account or public editing access is required.</p></div></div></section>
+    <article class="package">
+      <img src="poster-6.jpg" alt="Varanasi Ayodhya Prayagraj Chitrakoot tour package" onclick="openPoster('poster-6.jpg')" loading="lazy">
+      <div class="package-body"><h3>Varanasi • Ayodhya • Chitrakoot</h3><p>Kashi Vishwanath • Ganga Aarti • Ram Mandir • Sangam</p><div class="details"><span>Pilgrimage tour</span><button class="view" onclick="openPoster('poster-6.jpg')">View Brochure</button></div></div>
+    </article>
 
-<section id="contact"><div class="container">
-<div class="heading"><h2>Contact</h2><p>Your booking executive is ready to discuss the itinerary.</p></div>
-<div class="exec"><div class="avatar">SS</div><div style="flex:1"><h3 id="contactName">Shubham Solanke (Deshmukh)</h3><p>Booking Executive</p><strong id="contactNumber">+91 86050 72575</strong></div>
-<a class="btn primary" id="call" href="tel:+918605072575">📞 Call</a><a class="btn gold" id="whatsapp" href="https://wa.me/918605072575" target="_blank">WhatsApp</a></div>
-</div></section>
+    <article class="package">
+      <img src="poster-7.jpg" alt="Kerala tour package" onclick="openPoster('poster-7.jpg')" loading="lazy">
+      <div class="package-body"><h3>Kerala Getaway</h3><p>Backwaters • Tea Gardens • Wildlife • Waterfalls • Beaches</p><div class="details"><span>3 Nights / 4 Days shown</span><button class="view" onclick="openPoster('poster-7.jpg')">View Brochure</button></div></div>
+    </article>
+
+    <article class="package">
+      <img src="poster-8.jpg" alt="Rajasthan tour package" onclick="openPoster('poster-8.jpg')" loading="lazy">
+      <div class="package-body"><h3>Rajasthan Tour</h3><p>Jaipur • Jaisalmer • Udaipur • Jodhpur • Ajmer</p><div class="details"><span>Custom packages</span><button class="view" onclick="openPoster('poster-8.jpg')">View Brochure</button></div></div>
+    </article>
+
+    <article class="package">
+      <img src="poster-9.jpg" alt="Kashmir tour package" onclick="openPoster('poster-9.jpg')" loading="lazy">
+      <div class="package-body"><h3>Kashmir Tour</h3><p>Vaishno Devi • Jammu • Srinagar • Gulmarg • Sonmarg • Pahalgam</p><div class="details"><span>Custom packages</span><button class="view" onclick="openPoster('poster-9.jpg')">View Brochure</button></div></div>
+    </article>
+
+    <article class="package">
+      <img src="poster-10.jpg" alt="Goa tour package" onclick="openPoster('poster-10.jpg')" loading="lazy">
+      <div class="package-body"><h3>Goa Tour</h3><p>Beaches • Forts • Churches • Markets • River Cruise</p><div class="details"><span>Custom packages</span><button class="view" onclick="openPoster('poster-10.jpg')">View Brochure</button></div></div>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="section-head">
+    <div class="kicker">Travel Made Easy</div>
+    <h2>More Than Tour Packages</h2>
+    <p>One place for planning your trip from start to finish.</p>
+  </div>
+  <div class="grid">
+    <article class="package"><div class="package-body"><h3>🏨 Hotel Booking</h3><p>Hotel arrangements for your destination and itinerary.</p></div></article>
+    <article class="package"><div class="package-body"><h3>🚆 Railway Tickets</h3><p>Rail travel assistance as part of your trip planning.</p></div></article>
+    <article class="package"><div class="package-body"><h3>✈️ Flight Tickets</h3><p>Flight ticket assistance for domestic travel.</p></div></article>
+  </div>
+</section>
+
+<section class="contact-strip" id="contact">
+  <div class="contact-box">
+    <div><h2>Ready to plan your trip?</h2><p>Call Devansh Tours for package details and customized travel plans.</p></div>
+    <a class="btn btn-primary" href="tel:+918605072575">📞 8605072575</a>
+  </div>
+</section>
 </main>
 
-<footer><div class="container"><div class="footer-grid">
-<div><div class="logo-text" style="color:white">DEVANSH <span>TOURS</span></div><p>India tour packages and customized travel planning.</p></div>
-<div><div class="footer-title">Services</div><p>Tour Packages<br>Hotel Booking<br>Railway Tickets<br>Flight Tickets</p></div>
-<div><div class="footer-title">Booking Executive</div><p id="footerContact">Shubham Solanke (Deshmukh)<br>+91 86050 72575</p></div>
-</div><div class="copy">© <span id="year"></span> Devansh Tours. All rights reserved.</div></div></footer>
+<footer class="footer">
+  <div class="footer-inner">
+    <div><strong>DEVANSH TOURS</strong><div class="note">Tour packages • Hotel booking • Railway tickets • Flight tickets</div></div>
+    <div><strong>Contact</strong><div class="note">8605072575</div></div>
+  </div>
+</footer>
 
-<div class="notice" id="notice"></div>
+<div class="modal" id="modal" onclick="closePoster(event)">
+  <div class="modal-content">
+    <button class="close" onclick="closePoster()">×</button>
+    <img id="modalImage" src="" alt="Tour brochure">
+  </div>
+</div>
 
 <script>
-const data={
-exec:"Shubham Solanke (Deshmukh)",
-phone:"+91 86050 72575",
-hero:"Explore India with Devansh Tours.",
-desc:"From the Himalayas to Kerala, Rajasthan, Goa and spiritual India — choose a brochure package or ask us to build a customized trip for you.",
-packages:[
-["Rajasthan Tour Package","Rajasthan","Custom itinerary","Customised package","poster-1.jpg"],
-["Uttarakhand – Devbhoomi Yatra 4 Dham","Uttarakhand","7 Days / 6 Nights","As shown in brochure","poster-2.jpg"],
-["Shimla – Kullu – Manali Premium Tour","Himachal Pradesh","Premium tour package","Customised package","poster-3.jpg"],
-["Kerala Tour Package","Kerala","3 Nights / 4 Days","Customised package","poster-4.jpg"],
-["Mysuru – Ooty – Coorg Tour Package","Karnataka / Tamil Nadu","Custom itinerary","Customised package","poster-5.jpg"],
-["Goa – Beach, Fort, Church Tour Package","Goa","Custom itinerary","Customised package","poster-6.jpg"],
-["Varanasi – Ayodhya – Prayagraj – Chitrakoot Tirth Yatra","Uttar Pradesh","Custom itinerary","Customised package","poster-7.jpg"],
-["Shimla – Kullu – Manali – Atal Tunnel Tour Package","Himachal Pradesh","Custom itinerary","₹25,000 per person shown in brochure","poster-8.jpg"],
-["Vaishno Devi – Jammu Kashmir – Gulmarg – Sonmarg – Pahalgam Tour Package","Jammu & Kashmir","Custom itinerary","Customised package","poster-9.jpg"],
-["Shimla – Kullu – Manali Tour Package","Himachal Pradesh","Custom itinerary","Customised package","poster-10.jpg"]
-];
-
-function esc(x){
-return String(x).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;");
+function openPoster(src){
+  document.getElementById('modalImage').src = src;
+  document.getElementById('modal').classList.add('open');
+  document.body.style.overflow='hidden';
 }
-
-function render(){
-document.getElementById("execName").textContent=data.exec;
-document.getElementById("execPhone").textContent=data.phone;
-document.getElementById("contactName").textContent=data.exec;
-document.getElementById("contactNumber").textContent=data.phone;
-document.getElementById("footerContact").innerHTML=esc(data.exec)+"<br>"+esc(data.phone);
-document.getElementById("topPhone").textContent="📞 "+data.phone;
-document.getElementById("heroTitle").textContent=data.hero;
-document.getElementById("heroDesc").textContent=data.desc;
-
-const wa=data.phone.replace(/\D/g,"");
-document.getElementById("call").href="tel:+"+wa;
-document.getElementById("whatsapp").href="https://wa.me/"+wa;
-
-const states=[...new Set(data.packages.map(p=>p[1]))];
-document.getElementById("filter").innerHTML='<option value="">All packages</option>'+states.map(s=>`<option value="${esc(s)}">${esc(s)}</option>`).join("");
-document.getElementById("destination").innerHTML='<option value="">Select a package</option>'+data.packages.map((p,i)=>`<option value="${i}">${esc(p[0])}</option>`).join("");
-
-draw(data.packages);
-document.getElementById("year").textContent=new Date().getFullYear();
+function closePoster(e){
+  if(!e || e.target.id==='modal'){
+    document.getElementById('modal').classList.remove('open');
+    document.body.style.overflow='';
+  }
 }
-
-function draw(list){
-document.getElementById("posterGrid").innerHTML=list.map(p=>{
-const idx=data.packages.indexOf(p);
-return `<article class="poster">
-<img src="${esc(p[4])}" alt="${esc(p[0])}" loading="lazy">
-<div class="poster-body">
-<h3>${esc(p[0])}</h3>
-<p><b>${esc(p[2])}</b> • ${esc(p[1])}<br>${esc(p[3])}</p>
-<div class="poster-actions">
-<button class="btn primary" onclick="choose(${idx})">Enquire</button>
-<button class="btn outline" onclick="viewPoster(${JSON.stringify(p[4])},${JSON.stringify(p[0])})">View brochure</button>
-</div>
-</div></article>`;
-}).join("");
-}
-
-function choose(i){
-document.getElementById("destination").value=i;
-document.getElementById("booking").scrollIntoView({behavior:"smooth"});
-}
-
-function searchPackages(e){
-e.preventDefault();
-const s=document.getElementById("filter").value;
-const list=data.packages.filter(p=>!s||p[1]===s);
-draw(list);
-document.getElementById("packages").scrollIntoView({behavior:"smooth"});
-toast(list.length+" package(s) found");
-}
-
-function sendWhatsApp(e){
-e.preventDefault();
-const i=document.getElementById("destination").value;
-const p=data.packages[i];
-const txt=
-"Hello "+data.exec+", I would like to enquire about a Devansh Tours package.\n\n"+
-"Package: "+(p?p[0]:"")+"\n"+
-"Name: "+document.getElementById("name").value+"\n"+
-"Mobile: "+document.getElementById("mobile").value+"\n"+
-"Travellers: "+document.getElementById("travellers").value+"\n"+
-"Travel date: "+(document.getElementById("date").value||"Flexible")+"\n"+
-"Trip type: "+document.getElementById("tripType").value+"\n"+
-"Requirements: "+(document.getElementById("message").value||"Please suggest a suitable plan.");
-window.open("https://wa.me/"+data.phone.replace(/\D/g,"")+"?text="+encodeURIComponent(txt),"_blank");
-}
-
-function viewPoster(src,title){
-const w=window.open("","_blank");
-if(!w)return;
-w.document.write("<!doctype html><title>"+esc(title)+"</title><body style='margin:0;background:#111;display:grid;place-items:center'><img src='"+esc(src)+"' alt='"+esc(title)+"' style='max-width:100%;max-height:100vh;object-fit:contain'></body>");
-w.document.close();
-}
-
-function toast(t){
-const n=document.getElementById("notice");
-n.textContent=t;n.style.display="block";
-setTimeout(()=>n.style.display="none",2400);
-}
-
-render();
+document.addEventListener('keydown', function(e){
+  if(e.key==='Escape') closePoster();
+});
 </script>
 </body>
 </html>
