@@ -6,7 +6,7 @@
 <title>Devansh Tours | India Tour & Travel</title>
 <meta name="description" content="Devansh Tours - India tour packages, hotel booking, railway tickets, flight tickets and customized tour planning.">
 <style>
-:root{--navy:#081f3a;--blue:#1267a8;--sky:#eaf7ff;--gold:#f4b52d;--red:#d92525;--ink:#17212b;--muted:#657482;--white:#fff;--line:#dce7ee;--shadow:0 15px 40px rgba(8,31,58,.12)}
+:root{--navy:#081f3a;--blue:#1267a8;--gold:#f4b52d;--red:#d92525;--ink:#17212b;--muted:#657482;--line:#dce7ee;--shadow:0 15px 40px rgba(8,31,58,.12)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#f7fbfd}a{text-decoration:none;color:inherit}
 .container{width:min(1180px,92%);margin:auto}
 .top{background:var(--navy);color:white;font-size:13px}.top .container{display:flex;justify-content:space-between;gap:15px;padding:8px 0;flex-wrap:wrap}
@@ -22,14 +22,18 @@ section{padding:78px 0}.heading{margin-bottom:28px}.heading h2{font-size:35px;ma
 .features{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}.feature{background:white;border:1px solid var(--line);border-radius:16px;padding:21px}.feature .ico{font-size:29px}.feature h3{margin:9px 0 5px}.feature p{margin:0;color:var(--muted);font-size:14px}
 .booking{background:linear-gradient(135deg,#062a4d,#0c6da2);color:white}.booking-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px}.booking h2{font-size:39px;margin:0 0 10px}.booking-copy{color:#dceef9}.exec{display:flex;gap:15px;align-items:center;background:white;color:var(--ink);border-radius:16px;padding:17px;margin-top:25px}.avatar{width:58px;height:58px;flex:none;border-radius:50%;display:grid;place-items:center;background:#e9f6ff;color:var(--blue);font-weight:900;font-size:21px}.exec h3{margin:0}.exec p{margin:3px 0;color:var(--muted);font-size:13px}.booking-card{background:white;color:var(--ink);border-radius:18px;padding:25px;box-shadow:var(--shadow)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.full{grid-column:1/-1}
 .notice{display:none;position:fixed;right:18px;bottom:18px;z-index:100;background:var(--navy);color:white;padding:14px 17px;border-radius:12px;box-shadow:var(--shadow)}
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:90;padding:18px;overflow:auto}.modal.open{display:grid;place-items:center}.modal-box{background:white;border-radius:20px;width:min(820px,100%);max-height:92vh;overflow:auto;padding:25px}.modal-top{display:flex;justify-content:space-between;align-items:center}.close{border:0;border-radius:9px;padding:9px 12px;cursor:pointer}.admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.editor{border:1px solid var(--line);padding:15px;border-radius:14px;margin:12px 0}.editor-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 footer{background:var(--navy);color:#dce9f2;padding:45px 0 22px}.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}.footer-title{color:white;font-weight:900;margin-bottom:10px}.copy{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;margin-top:25px;font-size:13px;color:#9fb4c4}
 @media(max-width:900px){nav{display:none}.search{grid-template-columns:1fr 1fr}.poster-grid{grid-template-columns:1fr 1fr}.features{grid-template-columns:1fr 1fr}.booking-wrap,.footer-grid{grid-template-columns:1fr}}
-@media(max-width:560px){.search,.poster-grid,.features,.form-grid,.admin-grid,.editor-grid{grid-template-columns:1fr}.hero{min-height:560px}.hero h1{font-size:45px}.btn{width:100%}.actions{display:grid}.top .container{display:block}}
+@media(max-width:560px){.search,.poster-grid,.features,.form-grid{grid-template-columns:1fr}.hero{min-height:560px}.hero h1{font-size:45px}.btn{width:100%}.actions{display:grid}.top .container{display:block}}
 </style>
 </head>
 <body>
-<div class="top"><div class="container"><span>🇮🇳 Tours across India • Hotel Booking • Railway Tickets • Flight Tickets</span><span id="topPhone">📞 +91 86050 72575</span></div></div>
+
+<div class="top"><div class="container">
+<span>🇮🇳 Tours across India • Hotel Booking • Railway Tickets • Flight Tickets</span>
+<span id="topPhone">📞 +91 86050 72575</span>
+</div></div>
+
 <header><div class="container nav">
 <a class="logo-text" href="#home">DEVANSH <span>TOURS</span></a>
 <nav><a href="#packages">Packages</a><a href="#services">Services</a><a href="#booking">Book / Enquire</a><a href="#contact">Contact</a></nav>
@@ -45,7 +49,7 @@ footer{background:var(--navy);color:#dce9f2;padding:45px 0 22px}.footer-grid{dis
 </div></section>
 
 <div class="container">
-<form class="search" onsubmit="search(event)">
+<form class="search" onsubmit="searchPackages(event)">
 <div class="field"><label>DESTINATION / STATE</label><select id="filter"><option value="">All packages</option></select></div>
 <div class="field"><label>TRAVELLERS</label><input id="travellersSearch" type="number" min="1" value="2"></div>
 <div class="field"><label>TRAVEL DATE</label><input id="dateSearch" type="date"></div>
@@ -71,6 +75,7 @@ footer{background:var(--navy);color:#dce9f2;padding:45px 0 22px}.footer-grid{dis
 <section class="booking" id="booking"><div class="container booking-wrap">
 <div><span class="badge">BOOKING ENQUIRY</span><h2>Tell us where you want to go.</h2><p class="booking-copy">Submit your requirements and the enquiry will open directly in WhatsApp with our booking executive.</p>
 <div class="exec"><div class="avatar">SS</div><div><h3 id="execName">Shubham Solanke (Deshmukh)</h3><p>Booking Executive</p><strong id="execPhone">+91 86050 72575</strong></div></div></div>
+
 <div class="booking-card">
 <form onsubmit="sendWhatsApp(event)"><div class="form-grid">
 <div class="field"><label>NAME *</label><input id="name" required></div>
@@ -85,6 +90,7 @@ footer{background:var(--navy);color:#dce9f2;padding:45px 0 22px}.footer-grid{dis
 </div></div></section>
 
 <section><div class="container"><div class="heading"><h2>Safe & simple enquiries</h2><p>Your enquiry opens in WhatsApp. No customer account or public editing access is required.</p></div></div></section>
+
 <section id="contact"><div class="container">
 <div class="heading"><h2>Contact</h2><p>Your booking executive is ready to discuss the itinerary.</p></div>
 <div class="exec"><div class="avatar">SS</div><div style="flex:1"><h3 id="contactName">Shubham Solanke (Deshmukh)</h3><p>Booking Executive</p><strong id="contactNumber">+91 86050 72575</strong></div>
@@ -101,45 +107,110 @@ footer{background:var(--navy);color:#dce9f2;padding:45px 0 22px}.footer-grid{dis
 <div class="notice" id="notice"></div>
 
 <script>
-const defaults={
-exec:"Shubham Solanke (Deshmukh)",phone:"+91 86050 72575",
+const data={
+exec:"Shubham Solanke (Deshmukh)",
+phone:"+91 86050 72575",
 hero:"Explore India with Devansh Tours.",
 desc:"From the Himalayas to Kerala, Rajasthan, Goa and spiritual India — choose a brochure package or ask us to build a customized trip for you.",
 packages:[
-["Uttarakhand – Devbhoomi Yatra 4 Dham","Uttarakhand","7 Days / 6 Nights","As per enquiry","poster-1.jpg"],
-["Kerala Tour Package","Kerala","3 Nights / 4 Days","Customised package","poster-2.jpg"],
-["Vaishno Devi – Jammu Kashmir – Gulmarg – Sonmarg – Pahalgam","Jammu & Kashmir","Custom itinerary","Customised package","poster-3.jpg"],
-["Shimla – Kullu – Manali – Atal Tunnel","Himachal Pradesh","Custom itinerary","₹25,000 shown in brochure","poster-4.jpg"],
-["Rajasthan Tour Package","Rajasthan","Custom itinerary","Customised package","poster-5.jpg"],
-["Varanasi – Ayodhya – Prayagraj – Chitrakoot Tirth Yatra","Uttar Pradesh","Custom itinerary","Customised package","poster-6.jpg"],
-["Shimla – Kullu – Manali Premium Tour","Himachal Pradesh","Premium tour package","Customised package","poster-7.jpg"],
-["Mysuru – Ooty – Coorg Tour Package","Karnataka / Tamil Nadu","Custom itinerary","Customised package","poster-8.jpg"],
-["Shimla – Kullu – Manali Tour Package","Himachal Pradesh","Custom itinerary","Customised package","poster-9.jpg"],
-["Goa – Beach, Fort, Church Tour Package","Goa","Custom itinerary","Customised package","poster-10.jpg"]
-]};
-const data=structuredClone(defaults);
+["Rajasthan Tour Package","Rajasthan","Custom itinerary","Customised package","poster-1.jpg"],
+["Uttarakhand – Devbhoomi Yatra 4 Dham","Uttarakhand","7 Days / 6 Nights","As shown in brochure","poster-2.jpg"],
+["Shimla – Kullu – Manali Premium Tour","Himachal Pradesh","Premium tour package","Customised package","poster-3.jpg"],
+["Kerala Tour Package","Kerala","3 Nights / 4 Days","Customised package","poster-4.jpg"],
+["Mysuru – Ooty – Coorg Tour Package","Karnataka / Tamil Nadu","Custom itinerary","Customised package","poster-5.jpg"],
+["Goa – Beach, Fort, Church Tour Package","Goa","Custom itinerary","Customised package","poster-6.jpg"],
+["Varanasi – Ayodhya – Prayagraj – Chitrakoot Tirth Yatra","Uttar Pradesh","Custom itinerary","Customised package","poster-7.jpg"],
+["Shimla – Kullu – Manali – Atal Tunnel Tour Package","Himachal Pradesh","Custom itinerary","₹25,000 per person shown in brochure","poster-8.jpg"],
+["Vaishno Devi – Jammu Kashmir – Gulmarg – Sonmarg – Pahalgam Tour Package","Jammu & Kashmir","Custom itinerary","Customised package","poster-9.jpg"],
+["Shimla – Kullu – Manali Tour Package","Himachal Pradesh","Custom itinerary","Customised package","poster-10.jpg"]
+];
+
+function esc(x){
+return String(x).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;");
+}
 
 function render(){
-document.getElementById("execName").textContent=data.exec;document.getElementById("execPhone").textContent=data.phone;
-document.getElementById("contactName").textContent=data.exec;document.getElementById("contactNumber").textContent=data.phone;
-document.getElementById("footerContact").innerHTML=data.exec+"<br>"+data.phone;document.getElementById("topPhone").textContent="📞 "+data.phone;
-document.getElementById("heroTitle").textContent=data.hero;document.getElementById("heroDesc").textContent=data.desc;
-let wa=data.phone.replace(/\D/g,"");document.getElementById("call").href="tel:+"+wa;document.getElementById("whatsapp").href="https://wa.me/"+wa;
-let states=[...new Set(data.packages.map(p=>p[1]))];document.getElementById("filter").innerHTML='<option value="">All packages</option>'+states.map(s=>`<option>${esc(s)}</option>`).join("");
+document.getElementById("execName").textContent=data.exec;
+document.getElementById("execPhone").textContent=data.phone;
+document.getElementById("contactName").textContent=data.exec;
+document.getElementById("contactNumber").textContent=data.phone;
+document.getElementById("footerContact").innerHTML=esc(data.exec)+"<br>"+esc(data.phone);
+document.getElementById("topPhone").textContent="📞 "+data.phone;
+document.getElementById("heroTitle").textContent=data.hero;
+document.getElementById("heroDesc").textContent=data.desc;
+
+const wa=data.phone.replace(/\D/g,"");
+document.getElementById("call").href="tel:+"+wa;
+document.getElementById("whatsapp").href="https://wa.me/"+wa;
+
+const states=[...new Set(data.packages.map(p=>p[1]))];
+document.getElementById("filter").innerHTML='<option value="">All packages</option>'+states.map(s=>`<option value="${esc(s)}">${esc(s)}</option>`).join("");
 document.getElementById("destination").innerHTML='<option value="">Select a package</option>'+data.packages.map((p,i)=>`<option value="${i}">${esc(p[0])}</option>`).join("");
+
 draw(data.packages);
-document.getElementById("aExec").value=data.exec;document.getElementById("aPhone").value=data.phone;document.getElementById("aHero").value=data.hero;document.getElementById("aDesc").value=data.desc;
-document.getElementById("editors").innerHTML=data.packages.map((p,i)=>`<div class="editor"><b>${i+1}. ${esc(p[0])}</b><div class="editor-grid"><input data-i="${i}" data-k="0" value="${esc(p[0])}" placeholder="Package name"><input data-i="${i}" data-k="1" value="${esc(p[1])}" placeholder="State"><input data-i="${i}" data-k="2" value="${esc(p[2])}" placeholder="Duration"><input data-i="${i}" data-k="3" value="${esc(p[3])}" placeholder="Price / note"></div></div>`).join("");
 document.getElementById("year").textContent=new Date().getFullYear();
 }
-function draw(list){document.getElementById("posterGrid").innerHTML=list.map((p)=>{let idx=data.packages.indexOf(p);return `<article class="poster"><img src="${p[4]}" alt="${esc(p[0])}"><div class="poster-body"><h3>${esc(p[0])}</h3><p><b>${esc(p[2])}</b> • ${esc(p[1])}<br>${esc(p[3])}</p><div class="poster-actions"><button class="btn primary" onclick="choose(${idx})">Enquire</button><button class="btn outline" onclick="viewPoster('${p[4]}','${esc(p[0])}')">View brochure</button></div></div></article>`}).join("")}
-function choose(i){document.getElementById("destination").value=i;document.getElementById("booking").scrollIntoView({behavior:"smooth"})}
-function search(e){e.preventDefault();let s=document.getElementById("filter").value;let list=data.packages.filter(p=>!s||p[1]===s);draw(list);document.getElementById("packages").scrollIntoView({behavior:"smooth"});toast(list.length+" package(s) found")}
-function sendWhatsApp(e){e.preventDefault();let i=document.getElementById("destination").value,p=data.packages[i];let txt=`Hello ${data.exec}, I would like to enquire about a Devansh Tours package.%0A%0APackage: ${encodeURIComponent(p?p[0]:"")}%0AName: ${encodeURIComponent(document.getElementById("name").value)}%0AMobile: ${encodeURIComponent(document.getElementById("mobile").value)}%0ATravellers: ${encodeURIComponent(document.getElementById("travellers").value)}%0ATravel date: ${encodeURIComponent(document.getElementById("date").value||"Flexible")}%0ATrip type: ${encodeURIComponent(document.getElementById("tripType").value)}%0ARequirements: ${encodeURIComponent(document.getElementById("message").value||"Please suggest a suitable plan.")}`;window.open("https://wa.me/"+data.phone.replace(/\D/g,"")+"?text="+txt,"_blank")}
-function viewPoster(src,title){let w=window.open("","_blank");w.document.write(`<title>${title}</title><body style="margin:0;background:#111;display:grid;place-items:center"><img src="${src}" style="max-width:100%;max-height:100vh;object-fit:contain"></body>`)}
+
+function draw(list){
+document.getElementById("posterGrid").innerHTML=list.map(p=>{
+const idx=data.packages.indexOf(p);
+return `<article class="poster">
+<img src="${esc(p[4])}" alt="${esc(p[0])}" loading="lazy">
+<div class="poster-body">
+<h3>${esc(p[0])}</h3>
+<p><b>${esc(p[2])}</b> • ${esc(p[1])}<br>${esc(p[3])}</p>
+<div class="poster-actions">
+<button class="btn primary" onclick="choose(${idx})">Enquire</button>
+<button class="btn outline" onclick="viewPoster(${JSON.stringify(p[4])},${JSON.stringify(p[0])})">View brochure</button>
+</div>
+</div></article>`;
+}).join("");
 }
-function esc(x){return String(x).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;")}
-function toast(t){let n=document.getElementById("notice");n.textContent=t;n.style.display="block";setTimeout(()=>n.style.display="none",2400)}
+
+function choose(i){
+document.getElementById("destination").value=i;
+document.getElementById("booking").scrollIntoView({behavior:"smooth"});
+}
+
+function searchPackages(e){
+e.preventDefault();
+const s=document.getElementById("filter").value;
+const list=data.packages.filter(p=>!s||p[1]===s);
+draw(list);
+document.getElementById("packages").scrollIntoView({behavior:"smooth"});
+toast(list.length+" package(s) found");
+}
+
+function sendWhatsApp(e){
+e.preventDefault();
+const i=document.getElementById("destination").value;
+const p=data.packages[i];
+const txt=
+"Hello "+data.exec+", I would like to enquire about a Devansh Tours package.\n\n"+
+"Package: "+(p?p[0]:"")+"\n"+
+"Name: "+document.getElementById("name").value+"\n"+
+"Mobile: "+document.getElementById("mobile").value+"\n"+
+"Travellers: "+document.getElementById("travellers").value+"\n"+
+"Travel date: "+(document.getElementById("date").value||"Flexible")+"\n"+
+"Trip type: "+document.getElementById("tripType").value+"\n"+
+"Requirements: "+(document.getElementById("message").value||"Please suggest a suitable plan.");
+window.open("https://wa.me/"+data.phone.replace(/\D/g,"")+"?text="+encodeURIComponent(txt),"_blank");
+}
+
+function viewPoster(src,title){
+const w=window.open("","_blank");
+if(!w)return;
+w.document.write("<!doctype html><title>"+esc(title)+"</title><body style='margin:0;background:#111;display:grid;place-items:center'><img src='"+esc(src)+"' alt='"+esc(title)+"' style='max-width:100%;max-height:100vh;object-fit:contain'></body>");
+w.document.close();
+}
+
+function toast(t){
+const n=document.getElementById("notice");
+n.textContent=t;n.style.display="block";
+setTimeout(()=>n.style.display="none",2400);
+}
+
 render();
 </script>
-</body></html>
+</body>
+</html>
